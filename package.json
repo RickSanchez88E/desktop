@@ -2,7 +2,7 @@
   "name": "@agentify/desktop",
   "version": "0.1.0",
   "description": "Agentify Desktop control center and MCP server for local AI web sessions",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "type": "module",
   "main": "main.mjs",
   "bin": {
