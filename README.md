@@ -11,7 +11,21 @@ Agentify Desktop is a local control center for AI web sessions. It lets MCP-capa
 - Packs local repo/file context into prompts when requested.
 - Saves generated images/files locally so they can be reused in follow-up prompts.
 
-## Install And Run
+## Requirements
+
+- Node.js 20 or newer
+- An MCP-capable CLI if you want tool integration: Codex, Claude Code, or OpenCode
+
+## Supported Sites
+
+- `chatgpt.com`
+- `claude.ai`
+- `perplexity.ai`
+- `aistudio.google.com`
+- `gemini.google.com`
+- `grok.com`
+
+## Preferred Install And Run
 
 Start the desktop GUI without cloning this repo:
 
@@ -31,6 +45,8 @@ If you prefer a global install:
 npm install -g @agentify/desktop
 agentify-desktop
 ```
+
+If you want the older repo-clone and local source workflow, use [DEVELOPMENT_FROM_SOURCE.md](/Users/upwiz/crowd4gpt.com/desktop/DEVELOPMENT_FROM_SOURCE.md).
 
 ## MCP Server
 
@@ -267,61 +283,7 @@ Anyone with access to your machine account may be able to access local session d
 
 ## Development From Source
 
-If you want the repo checkout workflow instead of the published npm package:
-
-```bash
-git clone git@github.com:agentify-sh/desktop.git
-cd desktop
-./scripts/quickstart.sh
-```
-
-Useful quickstart variants:
-
-```bash
-./scripts/quickstart.sh --show-tabs
-./scripts/quickstart.sh --foreground
-./scripts/quickstart.sh --client codex
-./scripts/quickstart.sh --client claude
-./scripts/quickstart.sh --client opencode
-./scripts/quickstart.sh --client all
-./scripts/quickstart.sh --client none
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the desktop app from source:
-
-```bash
-npm run start
-```
-
-Run the MCP server from source:
-
-```bash
-npm run mcp
-```
-
-Run tests:
-
-```bash
-npm test
-```
-
-Build distributable app artifacts:
-
-```bash
-npm run dist
-```
-
-Test the npm launcher locally:
-
-```bash
-node ./bin/agentify-desktop.mjs --help
-```
+Source checkout, quickstart script usage, local build commands, and source-only debugging notes live in [DEVELOPMENT_FROM_SOURCE.md](/Users/upwiz/crowd4gpt.com/desktop/DEVELOPMENT_FROM_SOURCE.md).
 
 ## Package Commands
 
@@ -338,3 +300,7 @@ npx @agentify/desktop
 npx @agentify/desktop mcp
 npx -p @agentify/desktop agentify-desktop-mcp
 ```
+
+## License And Trademarks
+
+The code is licensed under `MPL-2.0`. Agentify trademarks and branding are not included in that license. See [TRADEMARKS.md](/Users/upwiz/crowd4gpt.com/desktop/TRADEMARKS.md).
